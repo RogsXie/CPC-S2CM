@@ -1,0 +1,35 @@
+# general
+seed: 42
+workers: 8
+
+#
+dataset: "Trento"
+dataset_root: 'HSI-Lidar-Trento\\'
+model_path:  "save/Trento"
+#dataset: "MUUFL"
+#dataset_root: 'HSI-Lidar-MUUFL\\'
+#model_path:  "save/MUUFL"
+#dataset: "Augsburg"
+#dataset_root: 'HSI-Augsburg\\'
+#model_path:  "save/Augsburg"
+
+# train options
+batch_size: 512
+image_size: 9
+joint_train_epoch: 10
+dim_emebeding: 128
+lr_scale: 10
+
+is_labeled_pixel: False
+is_pretrain: False
+
+# loss options
+learning_rate: 0.0001 #Trento&MUUFL 0.0001 Augsburg 0.005
+weight_decay: 0.0005 #0.0005
+contrastive_param: 0.5 # tau0.5
+weight_clu_loss: 1 # lambda1
+regularizer_coef: 0.00005   # gamma
+
+
+
+
